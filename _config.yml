@@ -117,11 +117,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "My name is Yoongon Kim. I'm attending Seoul National University. My major is Electrical and Computer Engineering. I'm interested AI and circuits."
   location         : "Seoul, South Korea"
-  email            : "yooongonkim@gmail.com"
+  email            : 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:yooongonkim@gmail.com"
+      url: "mailto:yooongonkim@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
