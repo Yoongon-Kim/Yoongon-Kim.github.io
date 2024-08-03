@@ -12,12 +12,12 @@ main:
   #   url: /sitemap/
   - title: "Categories"
     url: /categories/
-sidebar-category:
-  - title: "카테고리"
+docs:
+  - title: Book Study
     children:
-      - title: "블로그"
-        url: "/blog"
-      - title: "카테고리B"
-        url:  "/CategoryB"
-      - title: "카테고리C"
-        url:  "/CategoryC"
+      - title: "임베디드 C프로그래밍 최적화"
+        url: /categories/embedded_c_optimization
+  - title: 삽질일기
+    children:
+      - title: "라즈베리파이"
+        url: /categories/raspberry_pi
