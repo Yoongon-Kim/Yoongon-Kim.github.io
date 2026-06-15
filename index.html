@@ -12,7 +12,69 @@
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Song, Jiwon and Kim, Yoongon and Kim, Jae-Joon}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{arXiv preprint arXiv:2602.06454}</span><span class="p">,</span>
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> <h2 id="projects">projects</h2> <div class="projects"> <div class="row row-cols-1"> <div class="col mb-4"> <a href="/projects/dct-page/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/dct-page-480.webp 480w,/assets/img/dct-page-800.webp 800w,/assets/img/dct-page-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/dct-page.png" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">DCT-Page</h3> <p class="card-text">Training-free sparse page attention that speeds up long-context LLM decoding.</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> <div class="col mb-4"> <a href="/projects/snu-fastmri-challenge/"> <div class="card h-100 hoverable"> <div class="row no-gutters"> <div class="col-md-6"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/snu-fastmri-480.webp 480w,/assets/img/snu-fastmri-800.webp 800w,/assets/img/snu-fastmri-1400.webp 1400w," type="image/webp" sizes="(min-width: 768px) 156px, 50vw"></source> <img src="/assets/img/snu-fastmri.png" class="card-img" width="100%" height="auto" alt="project thumbnail" loading="eager" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </div> <div class="col-md-6"> <div class="card-body"> <h3 class="card-title">SNU FastMRI Challenge 2024</h3> <p class="card-text">Accelerated MRI reconstruction under an 8 GB-VRAM budget (team SuperFastMRI).</p> <div class="row ml-1 mr-1 p-0"> </div> </div> </div> </div> </div> </a> </div> </div> </div> </div> <div class="social"> <div class="contact-icons"> <a href="/assets/pdf/Yoongon_Kim_CV.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:yooongonkim@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://github.com/Yoongon-Kim" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> </div> <div class="contact-note">You can even add a little note about which of these is the best way to reach you. </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yoongon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> <h2 id="projects">projects</h2> <style>
+  /* Project cards: image fixed at 1/4 of the card width, centered on white so wide
+     figures get letterbox padding instead of being cropped or stretched. */
+  .project-card {
+    display: flex;
+    align-items: stretch;
+    min-height: 120px;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    overflow: hidden;
+    color: var(--global-text-color);
+    text-decoration: none;
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+  .project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  }
+  .project-thumb {
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: #fff;
+  }
+  .project-thumb img {
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+  }
+  .project-info {
+    flex: 1 1 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+  }
+  .project-info h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.2rem;
+  }
+  .project-card:hover .project-info h3 {
+    color: var(--global-theme-color);
+  }
+  .project-info p {
+    margin: 0;
+    opacity: 0.85;
+  }
+  @media (max-width: 576px) {
+    .project-card {
+      flex-direction: column;
+    }
+    .project-thumb {
+      max-width: 100%;
+      flex-basis: auto;
+    }
+  }
+</style> <div class="projects"> <a class="project-card" href="/projects/dct-page/"> <div class="project-thumb"> <img src="/assets/img/dct-page.png" alt="DCT-Page"> </div> <div class="project-info"> <h3>DCT-Page</h3> <p>Training-free sparse page attention that speeds up long-context LLM decoding.</p> </div> </a> <a class="project-card" href="/projects/snu-fastmri-challenge/"> <div class="project-thumb"> <img src="/assets/img/snu-fastmri.png" alt="SNU FastMRI Challenge 2024"> </div> <div class="project-info"> <h3>SNU FastMRI Challenge 2024</h3> <p>Accelerated MRI reconstruction under an 8 GB-VRAM budget (team SuperFastMRI).</p> </div> </a> </div> </div> <div class="social"> <div class="contact-icons"> <a href="/assets/pdf/Yoongon_Kim_CV.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:yooongonkim@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://github.com/Yoongon-Kim" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="/feed.xml" title="Rss icon"><i class="fa-solid fa-square-rss"></i></a> </div> <div class="contact-note">You can even add a little note about which of these is the best way to reach you. </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yoongon Kim. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
