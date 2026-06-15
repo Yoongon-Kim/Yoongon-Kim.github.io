@@ -1,15 +1,9 @@
 name: Render a CV
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
-  workflow_call:
+  # Auto-run disabled: this site uses a hand-uploaded CV PDF (see `cv_pdf` in
+  # _pages/cv.md), not RenderCV. Kept manual-only so it never fails on every push.
+  # To re-enable (switch to a structured _data/cv.yml -> auto-generated PDF), restore
+  # the `push:` trigger with the cv.yml/rendercv paths.
   workflow_dispatch:
 permissions:
   contents: write
