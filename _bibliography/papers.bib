@@ -1,11 +1,14 @@
 ---
 ---
 
-# No publications yet — this file is intentionally empty.
-#
-# Add entries below in standard BibTeX format. Jekyll Scholar renders them on the
-# /publications/ page; mark an entry with selected={true} to also feature it on the
-# homepage (and set selected_papers: true in _pages/about.md to show that block).
-#
-# Tip: keep this file free of stray "at" symbols until you add real entries — the
-# BibTeX parser treats every at-sign as the start of a new entry.
+@article{song2026relaygen,
+  abbr={arXiv},
+  title={{RelayGen: Intra-Generation Model Switching for Efficient Reasoning}},
+  author={Song, Jiwon and Kim, Yoongon and Kim, Jae-Joon},
+  journal={arXiv preprint arXiv:2602.06454},
+  year={2026},
+  arxiv={2602.06454},
+  abstract={Large reasoning models (LRMs) achieve strong performance on complex reasoning tasks by generating long, multi-step reasoning trajectories, but inference-time scaling incurs substantial deployment cost. A key challenge is that generation difficulty varies within a single output, whereas existing efficiency-oriented approaches either ignore this intra-generation variation or rely on supervised token-level routing with high system complexity. We present RelayGen, a training-free, segment-level runtime model switching framework that exploits difficulty variation in long-form reasoning. Through offline analysis of generation uncertainty using token probability margins, we show that coarse-grained segment-level control is sufficient to capture difficulty transitions within a reasoning trajectory. RelayGen identifies model-specific switch cues that signal transitions to lower-difficulty segments and dynamically delegates their continuation to a smaller model, while preserving high-difficulty reasoning on the large model. Across multiple reasoning benchmarks, RelayGen substantially reduces inference latency while preserving most of the accuracy of large models. When combined with speculative decoding, RelayGen achieves up to 2.2x end-to-end speedup with less than 2\% accuracy degradation, without requiring additional training or learned routing components.},
+  selected={true},
+  bibtex_show={true},
+}
