@@ -19,9 +19,8 @@ dominant cost. DCT-Page keeps that cost roughly constant — with no retraining.
 The KV cache is split into fixed-size pages (32 tokens by default). Each page is summarized by a
 compact **DCT-lowpass-IDCT proxy** — a few low-frequency coefficients that approximate the page.
 At every decoding step the query scores pages against their proxies, keeps the **top-k most
-relevant pages** at full precision, and either drops the rest or replaces them with their
-compressed form. Prefill runs full attention unchanged, so accuracy is only ever traded at decode
-time, where it is cheapest.
+relevant pages** at full precision, and drops the rest. Prefill runs full attention unchanged, so
+accuracy is only ever traded at decode time, where it is cheapest.
 
 Because the proxy is a fixed linear transform, the scorer needs **no training** — it works on a
 frozen model out of the box.
@@ -33,6 +32,6 @@ frozen model out of the box.
 - Five baselines for head-to-head comparison: SeerAttention-R, Multipole, Quest, DuoAttention, and
   InfLLM.
 - An oracle / diagnostic suite for analyzing which pages actually matter.
-- Benchmark runners for **RULER, LongBench v1/v2, AIME25, and GPQA** on Llama 3.x and Qwen3.
+- Benchmark runners for **RULER, LongBench v1/v2, AIME25, and GPQA** on Llama 3.1 and Qwen3.
 
 This is active, ongoing work.
