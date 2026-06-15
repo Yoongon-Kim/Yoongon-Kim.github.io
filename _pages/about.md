@@ -14,7 +14,7 @@ selected_papers: false # flip to true once you add a paper marked selected={true
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # flip to true once you have news to post (papers, talks, projects)
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
@@ -26,7 +26,7 @@ latest_posts:
 
 I'm a fourth-year undergraduate graduating in February 2027. I work on improving the performance of machine learning models, coming from a background in algorithmic acceleration — where the whole challenge is to speed models up while preserving their quality. That fight to hold on to quality is what pulled me toward improving it directly, and an efficiency-minded background still shapes how I approach it.
 
-I'm currently a research intern at the VLSI Lab (Prof. Jae-Joon Kim), and this summer I'll be joining DSAIL (Prof. Sungroh Yoon) to work on multimodal learning.
+I'm currently a research intern at the <a href='https://vlsi.snu.ac.kr/'>VLSI Lab</a> (Prof. <a href='https://scholar.google.com/citations?user=Ee994T0AAAAJ&hl=en'>Jae-Joon Kim</a>), and this summer I'll be joining <a href='https://data.snu.ac.kr/'>DSAIL</a> (Prof. <a href='https://scholar.google.com/citations?user=Bphl_fIAAAAJ&hl=en'>Sungroh Yoon</a>) to work on multimodal learning.
 
 <!-- Clear the floated profile photo so the sections below start full-width beneath it. -->
 <div style="clear: both;"></div>
