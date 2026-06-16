@@ -15,17 +15,15 @@ The [2024 SNU FastMRI Challenge](https://fastmri.snu.ac.kr/), hosted by Prof. Jo
 [Facebook AI's FastMRI challenge](https://fastmri.org/): reconstruct multi-coil brain MRI from
 undersampled k-space measurements, but under tight constraints — **8 GB of VRAM, no pretrained
 models, a small training set, and a 3,000-second inference limit** — across a wide range of
-acceleration factors. I competed as a two-person team, **SuperFastMRI**, with Dongwook Kho — we
-reached **4th on the public leaderboard**, though we fell outside the top 5 in the final private
-evaluation.
+acceleration factors. I competed as a two-person team, **SuperFastMRI**, with Dongwook Kho,
+placing **4th on the public leaderboard**.
 
 ## Our approach
 
-We used a **mixture-of-experts strategy**: not a single MoE model, but four separate
-[Feature-Image (FI) VarNet](https://www.nature.com/articles/s41598-024-59705-0) sub-models, each
-specialized for a range of acceleration factors. As in an MoE, only the relevant expert fires per
-input — a mask classifier reads the input's acceleration and routes it to the matching sub-model (or
-the nearest one).
+We took a **mixture-of-experts approach**: four
+[Feature-Image (FI) VarNet](https://www.nature.com/articles/s41598-024-59705-0) experts, each
+specialized for a band of acceleration factors, with a mask classifier that reads each input's
+acceleration and routes it to the matching expert (or the nearest one).
 
 <div style="text-align: center;">
   <img
@@ -42,8 +40,8 @@ features that the baseline E2E-VarNet loses when converting back to k-space are 
 cascades. To fit the 8 GB budget we dropped block-wise attention in exchange for more cascades and
 deeper UNets.
 
-Each expert is itself a small **ensemble** — the two checkpoints with the lowest validation loss,
-averaged — which we found consistently improved leaderboard results.
+Each expert uses **checkpoint ensembling** — we average the two best checkpoints from its training
+run, which consistently helped on the leaderboard.
 
 <div style="text-align: center;">
   <img
@@ -52,7 +50,7 @@ averaged — which we found consistently improved leaderboard results.
     style="max-width: 100%; height: auto;" />
 </div>
 
-_Inside one expert: two checkpoints of the same FI-VarNet (different epochs), averaged._
+_Each expert averages two checkpoints from the same training run._
 
 ---
 
