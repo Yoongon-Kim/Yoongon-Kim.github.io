@@ -44,31 +44,29 @@ against four sparse-attention baselines. At a matched 2,048-token budget, DCT-Pa
 strongest page-based baseline (Quest) by **+5.16** points on Llama and **+6.40** on Qwen3, and stays
 within **0.07** points of full dense attention on LongBench v1.
 
-| Model        | Method       | RULER | LongBench v1 | LongBench v2 |
-| :----------- | :----------- | ----: | -----------: | -----------: |
-| Llama-3.1-8B | Full-KV      | 88.78 |        50.32 |        29.82 |
-|              | Quest        | 81.10 |        48.35 |        18.29 |
-|              | Multipole    | 89.19 |        50.57 |        28.23 |
-|              | **DCT-Page** | 86.26 |        50.27 |        30.02 |
-| Qwen3-8B     | Full-KV      | 88.83 |        48.70 |        29.64 |
-|              | Quest        | 77.32 |        47.77 |        18.09 |
-|              | Multipole    | 88.04 |        48.48 |        31.41 |
-|              | **DCT-Page** | 83.72 |        48.63 |        32.01 |
+| Model        | Method          |     RULER | LongBench v1 | LongBench v2 |
+| :----------- | :-------------- | --------: | -----------: | -----------: |
+| Llama-3.1-8B | Full-KV         |     88.78 |        50.32 |        29.82 |
+|              | Quest           |     81.10 |        48.35 |        18.29 |
+|              | InfLLM          |     58.98 |        48.72 |        26.04 |
+|              | **DCT-Page**    | **86.26** |    **50.27** |    **30.02** |
+| Qwen3-8B     | Full-KV         |     88.83 |        48.70 |        29.64 |
+|              | Quest           |     77.32 |        47.77 |        18.09 |
+|              | SeerAttention-R |     66.74 |        48.24 |    **32.60** |
+|              | **DCT-Page**    | **83.72** |    **48.63** |        32.01 |
 
 _All sparse methods run at a matched 2,048-token decode budget. RULER at 32K (average over 13
 tasks); LongBench v1 (average over 6 tasks); LongBench v2 (overall accuracy). Full-KV is the dense
-reference; Multipole is the cluster-based method — comparably accurate, but ~3.6× slower at 32K._
+reference; the best sparse-method score in each column is in bold._
 
-- **Robustness at length.** The LongBench v2 column above already matches or edges out dense
-  attention — and it holds at extreme length: on the longest context bucket Quest's scorer collapses
-  to near-random (0.00 / 0.93%), while DCT-Page is the only sparse method evaluated that stays
-  functional.
+- **Robustness at length.** The LongBench v2 column already matches or edges out dense attention,
+  and it holds at the extreme: on the longest-context split Quest's scorer collapses to near-random
+  (0.00 / 0.93%), while DCT-Page holds up — even beating dense attention on Llama's longest split.
 - **Why it works.** At a matched 2,048-token budget, DCT-Page routes **~84%** of the dense softmax
   mass to the pages it keeps, against Quest's **65.6%** — an ~18-point gap in the quantity that
   directly bounds attention error.
 - **Speed.** At 128K context, DCT-Page is **5.65× faster** than dense attention in the attention
-  kernel and **1.70× faster** end-to-end. Against the cluster-based Multipole Attention — which is
-  comparably accurate — it decodes ~3.6× faster at 32K.
+  kernel and **1.70× faster** end-to-end.
 
 It isn't uniformly best. On word-frequency and aggregation tasks, where the relevant evidence is
 spread across many pages instead of concentrated on a few, any fixed-budget page selector — DCT-Page
