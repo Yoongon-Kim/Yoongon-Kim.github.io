@@ -2,7 +2,7 @@
 layout: page
 title: SNU FastMRI Challenge 2024
 description: Accelerated MRI reconstruction under an 8 GB-VRAM budget (team SuperFastMRI).
-img: assets/img/snu-fastmri.png
+img: assets/img/fastmri-cover.jpg
 importance: 2
 category: work
 related_publications: false
@@ -53,3 +53,9 @@ averaged — which we found consistently improved leaderboard results.
 </div>
 
 _Inside one expert: two checkpoints of the same FI-VarNet (different epochs), averaged._
+
+---
+
+_Card image: an axial T2 brain MRI by Aaron G. Filler, MD, PhD —
+[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), via
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:MRI_T2_Brain_axial_image.jpg)._
