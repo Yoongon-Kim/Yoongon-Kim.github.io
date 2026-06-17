@@ -39,12 +39,20 @@
  * It is emitted after `@use "themes"`, so it wins the cascade and recolours the
  * light-mode accent from the default magenta (#b509ac) to a medium navy-blue
  * (bright enough to read clearly against black body text).
- * (Dark mode keeps the gem's teal #2698ba.)
+ * Dark mode is overridden to the same blue just below (gem default was teal).
  * -------------------------------------------------------------------------- */
 :root {
   --global-theme-color: #2a5db0;
   --global-hover-color: #2a5db0;
   --global-code-bg-color: rgba(42, 93, 176, 0.05);
+}
+
+/* Match dark mode to the same blue accent (the gem defaults dark mode to teal
+   #2698ba). Same selector as the gem's dark block but emitted later, so it wins.
+   Code background keeps the gem's dark default. */
+html[data-theme="dark"] {
+  --global-theme-color: #2a5db0;
+  --global-hover-color: #2a5db0;
 }
 
 /* -----------------------------------------------------------------------------
