@@ -2,9 +2,9 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 cv_pdf: /assets/pdf/Yoongon_Kim_CV.pdf # path to your CV PDF (drop the file in assets/pdf/)
-email: yooongonkim@gmail.com # shown with email protection; delete this line if you don't want it public
+email: yoon_g_kim@snu.ac.kr # shown with email protection; delete this line if you don't want it public
 github_username: Yoongon-Kim # your GitHub username
 # linkedin_username:  # uncomment and add your LinkedIn vanity name to show a LinkedIn icon
 # scholar_userid:     # uncomment and add your Google Scholar ID once you publish
 # x_username:         # uncomment and add your X/Twitter handle
-rss_icon: true # comment this line to hide the RSS icon
+# rss_icon: true # hidden for now (no blog yet → empty feed); uncomment to show the RSS icon again
