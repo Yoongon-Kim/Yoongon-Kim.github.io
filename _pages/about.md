@@ -24,6 +24,25 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<style>
+  /* Shrink the profile photo a touch and lift it up beside the subtitle line so
+     it fills the empty space to the right of the header instead of starting below
+     the first paragraph (which made the photo overhang and push Publications down).
+     Desktop only — on mobile the photo stacks full-width above the text. */
+  @media (min-width: 576px) {
+    .profile.float-right {
+      width: 21%;
+      margin-top: -3.2rem;
+    }
+    /* Reserve the right column in the header so the title/subtitle text wraps
+       before it reaches the lifted photo (the photo lives in a separate block,
+       so text can't auto-wrap around it — this keeps them from overlapping). */
+    .post-header {
+      padding-right: 25%;
+    }
+  }
+</style>
+
 I'm a fourth-year undergraduate graduating in February 2027. I work on improving the performance of machine learning models, coming from a background in algorithmic acceleration — where the whole challenge is to speed models up while preserving their quality. That fight to hold on to quality is what pulled me toward improving it directly, and an efficiency-minded background still shapes how I approach it.
 
 I'm currently a research intern at the <a href='https://vlsi.snu.ac.kr/'>VLSI Lab</a> (Prof. <a href='https://scholar.google.com/citations?user=Ee994T0AAAAJ&hl=en'>Jae-Joon Kim</a>), and this summer I'll be joining <a href='https://data.snu.ac.kr/'>DSAIL</a> (Prof. <a href='https://scholar.google.com/citations?user=Bphl_fIAAAAJ&hl=en'>Sungroh Yoon</a>) to work on multimodal learning.
