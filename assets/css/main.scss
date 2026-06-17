@@ -46,3 +46,21 @@
   --global-hover-color: #2a5db0;
   --global-code-bg-color: rgba(42, 93, 176, 0.05);
 }
+
+/* -----------------------------------------------------------------------------
+ * Local typography override: switch the sans-serif default (Roboto) to a serif
+ * (EB Garamond) for body/headings, and DM Mono for code. The web fonts are
+ * loaded via `third_party_libraries.google_fonts.url.fonts` in _config.yml.
+ * main.css loads after tailwind.css, so these win the cascade. Headings use
+ * `font-family: inherit`, so they pick up EB Garamond automatically.
+ * -------------------------------------------------------------------------- */
+body {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
