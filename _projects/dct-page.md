@@ -46,20 +46,15 @@ against four sparse-attention baselines.
 |              | SeerAttention-R |     66.74 |        48.24 |    **32.60** |
 |              | **DCT-Page**    | **83.72** |    **48.63** |        32.01 |
 
-_All sparse methods run at a matched 2,048-token decode budget. RULER at 32K (average over 13
-tasks); LongBench v1 (average over 6 tasks); LongBench v2 (overall accuracy). Full-KV is the dense
-reference; the best sparse-method score in each column is in bold._
+<div style="text-align: center;"><em>All sparse methods run at a matched 2,048-token decode budget. RULER at 32K (average over 13 tasks); LongBench v1 (average over 6 tasks); LongBench v2 (overall accuracy). Full-KV is the dense reference; the best sparse-method score in each column is in bold.</em></div>
 
 <div style="text-align: center;">
   <img
     src="{{ '/assets/img/dct-page.png' | relative_url }}"
     alt="DCT-Page decode speedup over full-KV attention as context length grows"
     style="max-width: 100%; height: auto;" />
+  <p style="margin-top: 0.5rem;"><em>Decode speedup over full-KV (dense) attention as context length grows — up to 5.65× in the attention kernel and 1.70× end-to-end at 128K, while full-KV runs out of memory at the longest contexts.</em></p>
 </div>
-
-_Decode speedup over full-KV (dense) attention as context length grows — up to 5.65× in the
-attention kernel and 1.70× end-to-end at 128K, while full-KV runs out of memory at the longest
-contexts._
 
 It isn't uniformly best. On word-frequency and aggregation tasks, where the relevant evidence is
 spread across many pages instead of concentrated on a few, any fixed-budget page selector — DCT-Page

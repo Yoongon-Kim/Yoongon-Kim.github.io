@@ -30,10 +30,8 @@ acceleration and routes it to the matching expert (or the nearest one).
     src="{{ '/assets/img/snu-fastmri.png' | relative_url }}"
     alt="A mask classifier routes each input to the FI-VarNet sub-model trained for its acceleration range"
     style="max-width: 67%; height: auto;" />
+  <p style="margin-top: 0.5rem;"><em>Each input is routed by its acceleration to one of four FI-VarNet experts (acc 4-5, 6-7, 8-9, 10-11).</em></p>
 </div>
-
-_Each input is routed by its acceleration to one of four FI-VarNet experts (acc 4-5, 6-7, 8-9,
-10-11)._
 
 FI-VarNet keeps the data-consistency update in feature space rather than k-space, so the high-level
 features that the baseline E2E-VarNet loses when converting back to k-space are preserved across
@@ -48,9 +46,8 @@ run, which consistently helped on the leaderboard.
     src="{{ '/assets/img/fastmri-ensemble.png' | relative_url }}"
     alt="Each expert averages two checkpoints of the same FI-VarNet taken at different epochs"
     style="max-width: 67%; height: auto;" />
+  <p style="margin-top: 0.5rem;"><em>Each expert averages two checkpoints from the same training run.</em></p>
 </div>
-
-_Each expert averages two checkpoints from the same training run._
 
 ---
 
