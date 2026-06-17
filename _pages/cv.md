@@ -17,6 +17,7 @@ description: Curriculum vitae of Yoongon Kim.
   data="{{ '/assets/pdf/Yoongon_Kim_CV.pdf' | relative_url }}#view=FitH"
   type="application/pdf"
   style="width: 100%; height: 85vh; border: 1px solid var(--global-divider-color); border-radius: 8px;">
+
   <iframe
     src="{{ '/assets/pdf/Yoongon_Kim_CV.pdf' | relative_url }}#view=FitH"
     style="width: 100%; height: 85vh; border: 1px solid var(--global-divider-color); border-radius: 8px;"
