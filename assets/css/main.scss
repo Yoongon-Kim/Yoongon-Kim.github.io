@@ -37,11 +37,12 @@
  * This file shadows al_folio_core's assets/css/main.scss. Everything above is
  * copied verbatim from the gem (v1.0.11); the block below is the only addition.
  * It is emitted after `@use "themes"`, so it wins the cascade and recolours the
- * light-mode accent from the default magenta (#b509ac) to a deep navy.
+ * light-mode accent from the default magenta (#b509ac) to a medium navy-blue
+ * (bright enough to read clearly against black body text).
  * (Dark mode keeps the gem's teal #2698ba.)
  * -------------------------------------------------------------------------- */
 :root {
-  --global-theme-color: #1d3a6e;
-  --global-hover-color: #1d3a6e;
-  --global-code-bg-color: rgba(29, 58, 110, 0.05);
+  --global-theme-color: #2a5db0;
+  --global-hover-color: #2a5db0;
+  --global-code-bg-color: rgba(42, 93, 176, 0.05);
 }
