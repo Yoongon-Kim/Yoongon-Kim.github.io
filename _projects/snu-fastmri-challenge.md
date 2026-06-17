@@ -29,7 +29,7 @@ acceleration and routes it to the matching expert (or the nearest one).
   <img
     src="{{ '/assets/img/snu-fastmri.png' | relative_url }}"
     alt="A mask classifier routes each input to the FI-VarNet sub-model trained for its acceleration range"
-    style="max-width: 100%; height: auto;" />
+    style="max-width: 67%; height: auto;" />
 </div>
 
 _Each input is routed by its acceleration to one of four FI-VarNet experts (acc 4-5, 6-7, 8-9,
@@ -47,7 +47,7 @@ run, which consistently helped on the leaderboard.
   <img
     src="{{ '/assets/img/fastmri-ensemble.png' | relative_url }}"
     alt="Each expert averages two checkpoints of the same FI-VarNet taken at different epochs"
-    style="max-width: 100%; height: auto;" />
+    style="max-width: 67%; height: auto;" />
 </div>
 
 _Each expert averages two checkpoints from the same training run._
