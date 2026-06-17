@@ -4,7 +4,7 @@
 cv_pdf: /assets/pdf/Yoongon_Kim_CV.pdf # path to your CV PDF (drop the file in assets/pdf/)
 email: yoon_g_kim@snu.ac.kr # shown with email protection; delete this line if you don't want it public
 github_username: Yoongon-Kim # your GitHub username
-# linkedin_username:  # uncomment and add your LinkedIn vanity name to show a LinkedIn icon
+linkedin_username: yoongon-kim-686b302b0 # LinkedIn vanity (www.linkedin.com/in/<this>)
 # scholar_userid:     # uncomment and add your Google Scholar ID once you publish
 # x_username:         # uncomment and add your X/Twitter handle
 # rss_icon: true # hidden for now (no blog yet → empty feed); uncomment to show the RSS icon again
