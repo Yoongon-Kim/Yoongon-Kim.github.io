@@ -31,7 +31,7 @@ I'm currently a research intern at the <a href='https://vlsi.snu.ac.kr/'>VLSI La
 <!-- Clear the floated profile photo so the sections below start full-width beneath it. -->
 <div style="clear: both;"></div>
 
-## publications
+## Publications
 
 <style>
   /* Highlight my own name in the publications list as bold (theme default underlines it). */
@@ -42,7 +42,7 @@ I'm currently a research intern at the <a href='https://vlsi.snu.ac.kr/'>VLSI La
   {% bibliography %}
 </div>
 
-## projects
+## Projects
 
 <style>
   /* Project cards: image fixed at 1/4 of the card width, centered on white so wide
